@@ -17,7 +17,7 @@ public class SensorDataSender(HttpClient httpClient, ILogger<SensorDataSender> l
                 "application/json"
             );
 
-            var response = await httpClient.PostAsync("http://localhost:5162/api/SensorData", content); // 5002 — порт ProcessingService
+            var response = await httpClient.PostAsync("http://processing:80/api/SensorData", content); // 5002 — порт ProcessingService
 
             return response.IsSuccessStatusCode;
         }

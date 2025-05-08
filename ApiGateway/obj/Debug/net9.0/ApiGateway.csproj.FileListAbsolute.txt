@@ -18,6 +18,7 @@ D:\Project\Cluster\SEMS\ApiGateway\obj\Debug\net9.0\ApiGateway.AssemblyInfo.cs
 D:\Project\Cluster\SEMS\ApiGateway\obj\Debug\net9.0\ApiGateway.csproj.CoreCompileInputs.cache
 D:\Project\Cluster\SEMS\ApiGateway\obj\Debug\net9.0\ApiGateway.MvcApplicationPartsAssemblyInfo.cs
 D:\Project\Cluster\SEMS\ApiGateway\obj\Debug\net9.0\ApiGateway.MvcApplicationPartsAssemblyInfo.cache
+D:\Project\Cluster\SEMS\ApiGateway\obj\Debug\net9.0\ApiGateway.sourcelink.json
 D:\Project\Cluster\SEMS\ApiGateway\obj\Debug\net9.0\scopedcss\bundle\ApiGateway.styles.css
 D:\Project\Cluster\SEMS\ApiGateway\obj\Debug\net9.0\staticwebassets.build.json
 D:\Project\Cluster\SEMS\ApiGateway\obj\Debug\net9.0\staticwebassets.development.json
@@ -34,4 +35,3 @@ D:\Project\Cluster\SEMS\ApiGateway\obj\Debug\net9.0\refint\ApiGateway.dll
 D:\Project\Cluster\SEMS\ApiGateway\obj\Debug\net9.0\ApiGateway.pdb
 D:\Project\Cluster\SEMS\ApiGateway\obj\Debug\net9.0\ApiGateway.genruntimeconfig.cache
 D:\Project\Cluster\SEMS\ApiGateway\obj\Debug\net9.0\ref\ApiGateway.dll
-D:\Project\Cluster\SEMS\ApiGateway\obj\Debug\net9.0\ApiGateway.sourcelink.json

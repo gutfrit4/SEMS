@@ -1,22 +1,18 @@
+using ApiGateway.Interfaces;
+using ApiGateway.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddOpenApi();
 builder.Services.AddControllers();
+builder.Services.AddHttpClient<ISensorService, SensorService>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+app.UseSwagger();
+app.UseSwaggerUI();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
-app.UseHttpsRedirection();
-app.UseAuthorization();
-
+app.UseRouting();
 app.MapControllers();
 
-app.Run();
+app.Run("http://0.0.0.0:80");

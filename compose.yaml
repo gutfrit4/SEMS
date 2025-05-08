@@ -11,6 +11,8 @@ services:
       - "5432:5432"
     volumes:
         - pgdata:/var/lib/postgresql/data
+    networks:
+      - sems-net
   
   prometheus:
     image: prom/prometheus
@@ -18,6 +20,8 @@ services:
       - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
       - "9090:9090"
+    networks:
+      - sems-net
   
   grafana:
     image: grafana/grafana
@@ -25,7 +29,13 @@ services:
       - "3000:3000"
     volumes:
       - grafana-storage:/var/lib/grafana
-        
+      - ./monitoring/grafana-provisioning:/etc/grafana/provisioning
+    depends_on:
+      - prometheus
+    networks:
+        - sems-net
+  
+  
   apigateway:
     build:
       context: .
@@ -33,23 +43,27 @@ services:
     ports:
       - "5000:80"
     depends_on:
-      - processing
+      - datain
+    networks:
+      - sems-net
 
   datain:
     build:
       context: .
       dockerfile: DataIngestionService/Dockerfile
     ports:
-      - "5001:8080"
-    depends_on:
-      - processing
-  
+      - "5001:80"
+    networks:
+        - sems-net
+
   processing:
     build:
       context: .
       dockerfile: ProcessingService/Dockerfile
     depends_on:
       - postgres
+    networks:
+      - sems-net
 
   metrics:
     build:
@@ -57,11 +71,21 @@ services:
       dockerfile: MetricsService/Dockerfile
     ports:
       - "5002:80"
+    networks:
+      - sems-net
+
   
   simulator:
     build:
       context: .
       dockerfile: DeviceSimulator/Dockerfile
+    networks:
+      - sems-net
+    depends_on:
+        - datain
+
+networks:
+  sems-net:
 
 volumes:
   pgdata:

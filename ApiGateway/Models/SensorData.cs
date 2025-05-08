@@ -2,7 +2,6 @@
 
 public class SensorData
 {
+    public string DeviceId { get; set; } = string.Empty;
     public double Temperature { get; set; }
-    public double Pressure { get; set; }
-    public DateTime Timestamp { get; set; }
 }

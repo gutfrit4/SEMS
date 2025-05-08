@@ -1,24 +1,28 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ProcessingService.Data;
 using ProcessingService.Interfaces;
 using ProcessingService.Models;
 
 namespace ProcessingService.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
-public class SensorDataController(ISensorDataService sensorDataService) : ControllerBase
+[Route("api/SensorData")]
+public class SensorDataController(AppDbContext context) : ControllerBase
 {
     [HttpPost]
-    public async Task<IActionResult> PostSensorData([FromBody] SensorData data)
+    public async Task<IActionResult> Post([FromBody] SensorData data)
     {
-        var result = await sensorDataService.CreateAsync(data);
-        return Ok(new { status = "saved", result.Id });
-    }
-
-    [HttpGet]
-    public async Task<IActionResult> GetAll()
-    {
-        var data = await sensorDataService.GetAllAsync();
-        return Ok(data);
+        try
+        {
+            context.SensorData.Add(data);
+            await context.SaveChangesAsync();
+            Console.WriteLine($"✅ Saved: {data.DeviceId} - {data.Temperature}");
+            return Ok();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"❌ ERROR: {ex.Message}");
+            return StatusCode(500, ex.Message);
+        }
     }
 }

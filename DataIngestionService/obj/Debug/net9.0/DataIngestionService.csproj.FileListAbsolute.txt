@@ -18,6 +18,7 @@ D:\Project\Cluster\SEMS\DataIngestionService\obj\Debug\net9.0\DataIngestionServi
 D:\Project\Cluster\SEMS\DataIngestionService\obj\Debug\net9.0\DataIngestionService.csproj.CoreCompileInputs.cache
 D:\Project\Cluster\SEMS\DataIngestionService\obj\Debug\net9.0\DataIngestionService.MvcApplicationPartsAssemblyInfo.cs
 D:\Project\Cluster\SEMS\DataIngestionService\obj\Debug\net9.0\DataIngestionService.MvcApplicationPartsAssemblyInfo.cache
+D:\Project\Cluster\SEMS\DataIngestionService\obj\Debug\net9.0\DataIngestionService.sourcelink.json
 D:\Project\Cluster\SEMS\DataIngestionService\obj\Debug\net9.0\scopedcss\bundle\DataIngestionService.styles.css
 D:\Project\Cluster\SEMS\DataIngestionService\obj\Debug\net9.0\staticwebassets.build.json
 D:\Project\Cluster\SEMS\DataIngestionService\obj\Debug\net9.0\staticwebassets.development.json
@@ -34,4 +35,3 @@ D:\Project\Cluster\SEMS\DataIngestionService\obj\Debug\net9.0\refint\DataIngesti
 D:\Project\Cluster\SEMS\DataIngestionService\obj\Debug\net9.0\DataIngestionService.pdb
 D:\Project\Cluster\SEMS\DataIngestionService\obj\Debug\net9.0\DataIngestionService.genruntimeconfig.cache
 D:\Project\Cluster\SEMS\DataIngestionService\obj\Debug\net9.0\ref\DataIngestionService.dll
-D:\Project\Cluster\SEMS\DataIngestionService\obj\Debug\net9.0\DataIngestionService.sourcelink.json
