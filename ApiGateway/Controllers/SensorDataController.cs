@@ -1,6 +1,6 @@
 ﻿using System.Text;
 using System.Text.Json;
-using SensorSimulator.Models;
+using ApiGateway.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiGateway.Controllers;

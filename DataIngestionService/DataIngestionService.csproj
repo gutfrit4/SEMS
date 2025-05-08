@@ -20,8 +20,4 @@
       </Content>
     </ItemGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\SensorSimulator\SensorSimulator.csproj" />
-    </ItemGroup>
-
 </Project>
