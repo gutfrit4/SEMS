@@ -1,0 +1,6 @@
+@DataIngestionService_HostAddress = http://localhost:5129
+
+GET {{DataIngestionService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

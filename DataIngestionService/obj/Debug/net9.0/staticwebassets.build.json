@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "9HTkTSdtJAoVptPuB5WCGXWR7WwKR/zlsYRFptJFMaw=",
+  "Source": "DataIngestionService",
+  "BasePath": "_content/DataIngestionService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

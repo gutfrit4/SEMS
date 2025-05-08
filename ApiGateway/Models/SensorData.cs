@@ -1,0 +1,8 @@
+﻿namespace ApiGateway.Models;
+
+public class SensorData
+{
+    public double Temperature { get; set; }
+    public double Pressure { get; set; }
+    public DateTime Timestamp { get; set; }
+}
