@@ -6,6 +6,8 @@
     <projectFile profileName="http">DataIngestionService/DataIngestionService.csproj</projectFile>
     <projectFile profileName="https">DataIngestionService/DataIngestionService.csproj</projectFile>
     <projectFile kind="Docker">DeviceSimulator/DeviceSimulator.csproj</projectFile>
+    <projectFile profileName="http">MetricsService/MetricsService.csproj</projectFile>
+    <projectFile profileName="https">MetricsService/MetricsService.csproj</projectFile>
     <projectFile profileName="http">ProcessingService/ProcessingService.csproj</projectFile>
     <projectFile profileName="https">ProcessingService/ProcessingService.csproj</projectFile>
     <projectFile profileName="SensorSimulator">SensorSimulator/SensorSimulator.csproj</projectFile>
@@ -15,226 +17,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6738d96-0f22-4ac0-8b61-29bb3ec43729" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataIngestionService/Controllers/IngestionController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataIngestionService/Interfaces/ISensorDataSender.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataIngestionService/Models/SensorData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataIngestionService/Services/SensorDataSender.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DeviceSimulator/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DeviceSimulator/Models/SensorData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DeviceSimulator/Services/SensorSimulator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SEMS/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SEMS/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ApiGateway/CustomMetrics.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ApiGateway/Interfaces/IHistoryService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ApiGateway/Services/HistoryService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProcessingService/Interfaces/ISensorAnalyticsService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProcessingService/Models/SensorDataAnalytics.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProcessingService/Services/SensorAnalyticsService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SEMS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SEMS/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ApiGateway/ApiGateway.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/ApiGateway.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/Controllers/SensorDataController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/Controllers/SensorDataController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/ApiGateway.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/ApiGateway.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/ApiGateway.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/ApiGateway.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/ApiGateway.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/ApiGateway.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/ApiGateway.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/ApiGateway.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Bogus.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Binder.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.Configuration.CommandLine.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.Configuration.EnvironmentVariables.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.Configuration.FileExtensions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.Configuration.UserSecrets.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.Configuration.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.Diagnostics.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.Diagnostics.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Physical.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.FileSystemGlobbing.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.Hosting.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.Hosting.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.Http.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.Logging.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.Logging.Configuration.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.Logging.Console.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.Logging.Debug.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.Logging.EventLog.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.Logging.EventSource.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.Logging.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.Options.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/SensorSimulator.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/SensorSimulator.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/SensorSimulator.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/SensorSimulator.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/SensorSimulator.runtimeconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/System.Diagnostics.EventLog.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/runtimes/win/lib/net9.0/System.Diagnostics.EventLog.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/Controllers/SensorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/Controllers/SensorController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/Models/SensorData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/Models/SensorData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/Services/SensorService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/Services/SensorService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ApiGateway/obj/ApiGateway.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/ApiGateway.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/obj/ApiGateway.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/ApiGateway.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ApiGateway/obj/ApiGateway.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/ApiGateway.csproj.nuget.g.targets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ref/ApiGateway.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ref/ApiGateway.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/refint/ApiGateway.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/refint/ApiGateway.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ApiGateway/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ApiGateway/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ApiGateway/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ApiGateway/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/Controllers/SensorDataIngestionController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/DataIngestionService.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/DataIngestionService.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataIngestionService/Controllers/IngestionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/Controllers/IngestionController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataIngestionService/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataIngestionService/Models/SensorData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/Models/SensorData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataIngestionService/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Bogus.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/DataIngestionService.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/DataIngestionService.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/DataIngestionService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/DataIngestionService.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/DataIngestionService.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/DataIngestionService.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/DataIngestionService.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/DataIngestionService.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Binder.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.Configuration.CommandLine.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.Configuration.EnvironmentVariables.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.Configuration.FileExtensions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.Configuration.UserSecrets.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.Configuration.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.Diagnostics.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.Diagnostics.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Physical.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.FileSystemGlobbing.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.Hosting.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.Hosting.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.Http.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.Logging.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.Logging.Configuration.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.Logging.Console.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.Logging.Debug.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.Logging.EventLog.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.Logging.EventSource.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.Logging.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.Options.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/SensorSimulator.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/SensorSimulator.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/SensorSimulator.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/SensorSimulator.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/SensorSimulator.runtimeconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/System.Diagnostics.EventLog.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/runtimes/win/lib/net9.0/System.Diagnostics.EventLog.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/DataIngestionService.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/DataIngestionService.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/DataIngestionService.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/DataIngestionService.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/DataIngestionService.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/DataIngestionService.csproj.nuget.g.targets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/DataIngestionService.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/DataIngestionService.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/DataIngestionService.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/DataIngestionService.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/DataIngestionService.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/DataIngestionService.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/DataIngestionService.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/DataIngestionService.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/DataIngestionService.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/DataIngestionService.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/DataIngestionService.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/DataIngestionService.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/DataIngestionService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/DataIngestionService.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/DataIngestionService.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/DataIngestionService.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/ref/DataIngestionService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/ref/DataIngestionService.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/refint/DataIngestionService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/refint/DataIngestionService.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DeviceSimulator/Models/SensorData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceSimulator/Models/SensorData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DeviceSimulator/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceSimulator/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DeviceSimulator/Services/SensorSimulator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceSimulator/Services/SensorSimulator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MetricsService/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/MetricsService/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MetricsService/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MetricsService/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProcessingService/Controllers/SensorDataController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/Controllers/SensorDataController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProcessingService/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProcessingService/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProcessingService/Models/SensorData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/Models/SensorData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProcessingService/ProcessingService.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/ProcessingService.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProcessingService/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProcessingService/Services/SensorDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/Services/SensorDataService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProcessingService/obj/Debug/net9.0/ProcessingService.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/obj/Debug/net9.0/ProcessingService.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProcessingService/obj/Debug/net9.0/ProcessingService.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/obj/Debug/net9.0/ProcessingService.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProcessingService/obj/Debug/net9.0/ProcessingService.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/obj/Debug/net9.0/ProcessingService.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProcessingService/obj/Debug/net9.0/ProcessingService.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/obj/Debug/net9.0/ProcessingService.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProcessingService/obj/ProcessingService.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/obj/ProcessingService.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingService/obj/ProcessingService.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/obj/ProcessingService.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProcessingService/obj/ProcessingService.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/obj/ProcessingService.csproj.nuget.g.targets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProcessingService/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProcessingService/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProcessingService/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProcessingService/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProcessingService/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SEMS.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SEMS.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/Interfaces/IDataSender.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/Interfaces/ISensorDataGenerator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/Models/SensorData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/Properties/launchSettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/SensorSimulator.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/Services/BogusSensorDataGenerator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/Services/HttpDataSender.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/Worker.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/appsettings.Development.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/appsettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Bogus.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Binder.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.Configuration.CommandLine.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.Configuration.EnvironmentVariables.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.Configuration.FileExtensions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.Configuration.UserSecrets.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.Configuration.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.Diagnostics.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.Diagnostics.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Physical.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.FileSystemGlobbing.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.Hosting.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.Hosting.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.Http.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.Logging.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.Logging.Configuration.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.Logging.Console.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.Logging.Debug.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.Logging.EventLog.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.Logging.EventSource.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.Logging.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.Options.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/SensorSimulator.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/SensorSimulator.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/SensorSimulator.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/SensorSimulator.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/SensorSimulator.runtimeconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/System.Diagnostics.EventLog.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/appsettings.Development.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/appsettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/runtimes/win/lib/net9.0/System.Diagnostics.EventLog.Messages.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/bin/Debug/net9.0/runtimes/win/lib/net9.0/System.Diagnostics.EventLog.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/obj/Debug/net9.0/.NETCoreApp,Version=v9.0.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/obj/Debug/net9.0/SensorSi.1915EF4E.Up2Date" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/obj/Debug/net9.0/SensorSimulator.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/obj/Debug/net9.0/SensorSimulator.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/obj/Debug/net9.0/SensorSimulator.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/obj/Debug/net9.0/SensorSimulator.GlobalUsings.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/obj/Debug/net9.0/SensorSimulator.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/obj/Debug/net9.0/SensorSimulator.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/obj/Debug/net9.0/SensorSimulator.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/obj/Debug/net9.0/SensorSimulator.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/obj/Debug/net9.0/SensorSimulator.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/obj/Debug/net9.0/SensorSimulator.genruntimeconfig.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/obj/Debug/net9.0/SensorSimulator.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/obj/Debug/net9.0/apphost.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/obj/Debug/net9.0/ref/SensorSimulator.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/obj/Debug/net9.0/refint/SensorSimulator.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/obj/SensorSimulator.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/obj/SensorSimulator.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/obj/SensorSimulator.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/obj/project.assets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/obj/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/obj/rider.project.model.nuget.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SensorSimulator/obj/rider.project.restore.info" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monitoring/prometheus.yml" beforeDir="false" afterPath="$PROJECT_DIR$/monitoring/prometheus.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,6 +99,9 @@
     &quot;accountId&quot;: &quot;995a7d14-e6ed-4827-82dd-7edc0e9dd62e&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://D:/Project/Cluster/SEMS/ApiGateway/obj/Debug/net9.0/ApiGateway.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -280,8 +123,12 @@
   &quot;keyToString&quot;: {
     &quot;.NET Launch Settings Profile.ApiGateway: http.executor&quot;: &quot;Run&quot;,
     &quot;.NET Launch Settings Profile.ApiGateway: https.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.DataIngestionService: http.executor&quot;: &quot;Run&quot;,
     &quot;.NET Launch Settings Profile.DataIngestionService: https.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.MetricsService: http.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.ProcessingService: http.executor&quot;: &quot;Run&quot;,
     &quot;.NET Launch Settings Profile.SensorSimulator.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.DeviceSimulator.executor&quot;: &quot;Run&quot;,
     &quot;Docker.compose.yaml.datain: Compose Deployment.executor&quot;: &quot;Run&quot;,
     &quot;Docker.compose.yaml.grafana: Compose Deployment.executor&quot;: &quot;Run&quot;,
     &quot;Docker.compose.yaml.postgres: Compose Deployment.executor&quot;: &quot;Run&quot;,
@@ -289,6 +136,7 @@
     &quot;Docker.compose.yaml.simulator: Compose Deployment.executor&quot;: &quot;Run&quot;,
     &quot;Docker.compose.yaml: Compose Deployment.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -299,13 +147,34 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ],
     &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
       &quot;yaml&quot;,
       &quot;PLAIN_TEXT&quot;
     ]
   }
 }</component>
-  <component name="RunManager" selected="Docker.compose.yaml.simulator: Compose Deployment">
+  <component name="RunManager" selected=".NET Launch Settings Profile.MetricsService: http">
+    <configuration name="DeviceSimulator" type="DotNetProject" factoryName=".NET Project" temporary="true">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/DeviceSimulator/bin/Debug/net9.0/DeviceSimulator.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DeviceSimulator/bin/Debug/net9.0" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/DeviceSimulator/DeviceSimulator.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="net9.0" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
     <configuration name="ApiGateway: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/ApiGateway/ApiGateway.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net9.0" />
@@ -353,6 +222,36 @@
     </configuration>
     <configuration name="DataIngestionService: https" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/DataIngestionService/DataIngestionService.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value="net9.0" />
+      <option name="LAUNCH_PROFILE_NAME" value="https" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="MetricsService: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/MetricsService/MetricsService.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value="net9.0" />
+      <option name="LAUNCH_PROFILE_NAME" value="http" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="MetricsService: https" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/MetricsService/MetricsService.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net9.0" />
       <option name="LAUNCH_PROFILE_NAME" value="https" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
@@ -464,6 +363,27 @@
       <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
       <method v="2" />
     </configuration>
+    <configuration name="MetricsService/Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="metricsservice" />
+          <option name="containerName" value="metricsservice" />
+          <option name="contextFolderPath" value="D:\Project\Cluster\SEMS" />
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="8080" />
+                <option name="hostIp" value="127.0.0.1" />
+                <option name="hostPort" value="8080" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+          <option name="sourceFilePath" value="MetricsService/Dockerfile" />
+        </settings>
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
+      <method v="2" />
+    </configuration>
     <configuration name="ProcessingService/Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
@@ -562,20 +482,6 @@
       <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
       <method v="2" />
     </configuration>
-    <configuration name="compose.yaml.prometheus: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="prometheus" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="compose.yaml" />
-        </settings>
-      </deployment>
-      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
-      <method v="2" />
-    </configuration>
     <configuration name="compose.yaml.simulator: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -592,11 +498,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue=".NET Project.DeviceSimulator" />
+        <item itemvalue="Docker.compose.yaml.postgres: Compose Deployment" />
         <item itemvalue="Docker.compose.yaml.simulator: Compose Deployment" />
         <item itemvalue="Docker.compose.yaml.datain: Compose Deployment" />
         <item itemvalue="Docker.compose.yaml.grafana: Compose Deployment" />
-        <item itemvalue="Docker.compose.yaml.prometheus: Compose Deployment" />
-        <item itemvalue="Docker.compose.yaml.postgres: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -615,7 +521,27 @@
       <workItem from="1746640348336" duration="75000" />
       <workItem from="1746640499111" duration="1997000" />
       <workItem from="1746694915500" duration="3046000" />
+      <workItem from="1746705290366" duration="14410000" />
+      <workItem from="1747678720933" duration="12662000" />
+      <workItem from="1747863414418" duration="1437000" />
     </task>
+    <task id="LOCAL-00001" summary="test commit">
+      <option name="closed" value="true" />
+      <created>1746706552930</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746706552930</updated>
+    </task>
+    <task id="LOCAL-00002" summary="v1">
+      <option name="closed" value="true" />
+      <created>1746724115879</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1746724115879</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -625,5 +551,8 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="test commit" />
+    <MESSAGE value="v1" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1" />
   </component>
 </project>

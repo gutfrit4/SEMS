@@ -13,7 +13,6 @@ app.MapGet("/ping", () =>
 {
     MetricsCollector.RequestCounter.Inc();
     MetricsCollector.RandomTemperature.Set(new Random().Next(20, 40));
-    return Results.Ok("Ping received and metrics updated.");
 });
 
 app.MapGet("/error", () =>

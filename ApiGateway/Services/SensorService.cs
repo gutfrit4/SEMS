@@ -5,14 +5,45 @@ using ApiGateway.Models;
 
 namespace ApiGateway.Services;
 
-public class SensorService(HttpClient httpClient, IConfiguration config) : ISensorService
+public class SensorService(HttpClient? httpClient) : ISensorService
 {
+    
+    private readonly ILogger<SensorService> _logger;
+
+    private const string TargetUrl = "http://datain:80/sensor-data"; // Заміни на актуальну адресу
+
+
     public async Task<HttpResponseMessage> ForwardSensorDataAsync(SensorData data)
     {
+        Console.WriteLine("[SEND] " + JsonSerializer.Serialize(data));
+        
         var json = JsonSerializer.Serialize(data);
-        var content = new StringContent(json, Encoding.UTF8, "application/json");
+        var content = new StringContent(
+            JsonSerializer.Serialize(data),
+            Encoding.UTF8,
+            "application/json"
+        );
+        // var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-        var ingestionUrl = config["IngestionServiceUrl"] ?? throw new InvalidOperationException("IngestionServiceUrl not configured");
-        return await httpClient.PostAsync($"{ingestionUrl}/api/ingestion", content);
+        try
+        {
+            var response = await httpClient.PostAsync(TargetUrl, content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                CustomMetrics.ForwardedRequests.Inc(); // ✅ рахуємо успішні запити
+            }
+            else
+            {
+                CustomMetrics.ForwardErrors.Inc(); // ❌ рахуємо помилки
+            }
+
+            return response;
+        }
+        catch (Exception)
+        {
+            CustomMetrics.ForwardErrors.Inc(); // ❌ у разі виключення — теж фіксуємо помилку
+            throw;
+        }
     }
 }

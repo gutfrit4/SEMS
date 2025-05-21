@@ -13,7 +13,8 @@ services:
         - pgdata:/var/lib/postgresql/data
     networks:
       - sems-net
-  
+
+
   prometheus:
     image: prom/prometheus
     volumes:
@@ -22,6 +23,7 @@ services:
       - "9090:9090"
     networks:
       - sems-net
+  
   
   grafana:
     image: grafana/grafana
@@ -47,6 +49,7 @@ services:
     networks:
       - sems-net
 
+
   datain:
     build:
       context: .
@@ -56,14 +59,18 @@ services:
     networks:
         - sems-net
 
+
   processing:
     build:
       context: .
       dockerfile: ProcessingService/Dockerfile
     depends_on:
       - postgres
+    ports:
+      - "5003:80"
     networks:
       - sems-net
+
 
   metrics:
     build:
@@ -84,8 +91,10 @@ services:
     depends_on:
         - datain
 
+
 networks:
   sems-net:
+
 
 volumes:
   pgdata:

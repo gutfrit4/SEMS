@@ -10,6 +10,6 @@ Console.CancelKeyPress += (s, e) =>
     e.Cancel = true;
 };
 
-string ingestionEndpoint = "http://datain:80/api/ingestion"; // DataIngestionService
+const string ingestionEndpoint = "http://apigateway:80/sensor-data";
 var simulator = new SensorSimulator(ingestionEndpoint);
 await simulator.RunAsync(cts.Token);

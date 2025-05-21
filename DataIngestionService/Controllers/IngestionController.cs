@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace DataIngestionService.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("sensor-data")]
 public class IngestionController(ISensorDataSender sender) : ControllerBase
 {
     [HttpPost]

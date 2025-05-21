@@ -40,6 +40,9 @@ namespace ProcessingService.Migrations
                     b.Property<DateTime>("Timestamp")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<double>("Voltage")
+                        .HasColumnType("double precision");
+
                     b.HasKey("Id");
 
                     b.ToTable("SensorData");
