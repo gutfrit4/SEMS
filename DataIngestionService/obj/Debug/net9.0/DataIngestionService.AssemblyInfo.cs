@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DataIngestionService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e274b482f406c75a36bab879833f6b1754ea886")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+20774a53092e375bc84f6c2120b641059b441618")]
 [assembly: System.Reflection.AssemblyProductAttribute("DataIngestionService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DataIngestionService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

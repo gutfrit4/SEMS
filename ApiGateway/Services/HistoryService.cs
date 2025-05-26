@@ -10,10 +10,11 @@ public class HistoryService(HttpClient httpClient) : IHistoryService
     
     public async Task<IEnumerable<SensorData>> GetHistoryAsync()
     {
+        CustomMetrics.HistoryRequests.Inc();   // ← рахуємо кожне звернення до історії
         var response = await httpClient.GetAsync(TargetUrl);
         response.EnsureSuccessStatusCode();
-
         var json = await response.Content.ReadAsStringAsync();
-        return JsonSerializer.Deserialize<IEnumerable<SensorData>>(json) ?? new List<SensorData>();
+        return JsonSerializer.Deserialize<IEnumerable<SensorData>>(json)
+               ?? new List<SensorData>();
     }
 }

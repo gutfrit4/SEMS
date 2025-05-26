@@ -35,3 +35,15 @@ D:\Project\Cluster\SEMS\ApiGateway\obj\Debug\net9.0\refint\ApiGateway.dll
 D:\Project\Cluster\SEMS\ApiGateway\obj\Debug\net9.0\ApiGateway.pdb
 D:\Project\Cluster\SEMS\ApiGateway\obj\Debug\net9.0\ApiGateway.genruntimeconfig.cache
 D:\Project\Cluster\SEMS\ApiGateway\obj\Debug\net9.0\ref\ApiGateway.dll
+D:\Project\Cluster\SEMS\ApiGateway\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+D:\Project\Cluster\SEMS\ApiGateway\bin\Debug\net9.0\Prometheus.NetStandard.dll
+D:\Project\Cluster\SEMS\ApiGateway\bin\Debug\net9.0\Prometheus.AspNetCore.dll
+D:\Project\Cluster\SEMS\ApiGateway\bin\Debug\net9.0\Serilog.dll
+D:\Project\Cluster\SEMS\ApiGateway\bin\Debug\net9.0\Serilog.AspNetCore.dll
+D:\Project\Cluster\SEMS\ApiGateway\bin\Debug\net9.0\Serilog.Extensions.Hosting.dll
+D:\Project\Cluster\SEMS\ApiGateway\bin\Debug\net9.0\Serilog.Extensions.Logging.dll
+D:\Project\Cluster\SEMS\ApiGateway\bin\Debug\net9.0\Serilog.Formatting.Compact.dll
+D:\Project\Cluster\SEMS\ApiGateway\bin\Debug\net9.0\Serilog.Settings.Configuration.dll
+D:\Project\Cluster\SEMS\ApiGateway\bin\Debug\net9.0\Serilog.Sinks.Console.dll
+D:\Project\Cluster\SEMS\ApiGateway\bin\Debug\net9.0\Serilog.Sinks.Debug.dll
+D:\Project\Cluster\SEMS\ApiGateway\bin\Debug\net9.0\Serilog.Sinks.File.dll

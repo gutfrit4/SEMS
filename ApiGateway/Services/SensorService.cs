@@ -36,13 +36,15 @@ public class SensorService(HttpClient? httpClient) : ISensorService
             else
             {
                 CustomMetrics.ForwardErrors.Inc(); // ❌ рахуємо помилки
+                _logger.LogWarning("Forward failed: {StatusCode}", response.StatusCode);
             }
 
             return response;
         }
-        catch (Exception)
+        catch (Exception ex)
         {
             CustomMetrics.ForwardErrors.Inc(); // ❌ у разі виключення — теж фіксуємо помилку
+            _logger.LogError(ex, "Exception while forwarding sensor data");
             throw;
         }
     }

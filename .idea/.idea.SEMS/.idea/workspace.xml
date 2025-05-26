@@ -17,64 +17,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6738d96-0f22-4ac0-8b61-29bb3ec43729" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ApiGateway/CustomMetrics.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiGateway/Interfaces/IHistoryService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ApiGateway/Services/HistoryService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProcessingService/Interfaces/ISensorAnalyticsService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProcessingService/Models/SensorDataAnalytics.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProcessingService/Services/SensorAnalyticsService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SEMS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SEMS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/ApiGateway.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/ApiGateway.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/Controllers/SensorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/Controllers/SensorController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/Models/SensorData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/Models/SensorData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/Services/HistoryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/Services/HistoryService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ApiGateway/Services/SensorService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/Services/SensorService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/obj/ApiGateway.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/ApiGateway.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/obj/ApiGateway.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/ApiGateway.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/ApiGateway.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/ApiGateway.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/ApiGateway.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/ApiGateway.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/ApiGateway.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/ApiGateway.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/ApiGateway.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/ApiGateway.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/bin/Debug/net9.0/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ApiGateway/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/Controllers/IngestionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/Controllers/IngestionController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/Models/SensorData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/Models/SensorData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.MvcApplicationPartsAssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ApiGateway.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ref/ApiGateway.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/ref/ApiGateway.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/refint/ApiGateway.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ApiGateway/obj/Debug/net9.0/refint/ApiGateway.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/DataIngestionService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/DataIngestionService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/DataIngestionService.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/DataIngestionService.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/DataIngestionService.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/bin/Debug/net9.0/DataIngestionService.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/DataIngestionService.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/DataIngestionService.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/DataIngestionService.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/DataIngestionService.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DeviceSimulator/Models/SensorData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceSimulator/Models/SensorData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DeviceSimulator/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceSimulator/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DeviceSimulator/Services/SensorSimulator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DeviceSimulator/Services/SensorSimulator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MetricsService/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/MetricsService/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MetricsService/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MetricsService/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingService/Controllers/SensorDataController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/Controllers/SensorDataController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingService/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingService/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingService/Models/SensorData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/Models/SensorData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingService/ProcessingService.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/ProcessingService.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingService/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingService/Services/SensorDataService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/Services/SensorDataService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/DataIngestionService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/DataIngestionService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/DataIngestionService.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/DataIngestionService.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/ref/DataIngestionService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/ref/DataIngestionService.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/refint/DataIngestionService.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DataIngestionService/obj/Debug/net9.0/refint/DataIngestionService.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProcessingService/obj/Debug/net9.0/ProcessingService.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/obj/Debug/net9.0/ProcessingService.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProcessingService/obj/Debug/net9.0/ProcessingService.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/obj/Debug/net9.0/ProcessingService.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingService/obj/Debug/net9.0/ProcessingService.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/obj/Debug/net9.0/ProcessingService.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingService/obj/Debug/net9.0/ProcessingService.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/obj/Debug/net9.0/ProcessingService.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingService/obj/ProcessingService.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/obj/ProcessingService.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingService/obj/ProcessingService.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/obj/ProcessingService.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingService/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingService/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingService/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingService/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingService/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingService/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitoring/prometheus.yml" beforeDir="false" afterPath="$PROJECT_DIR$/monitoring/prometheus.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -523,7 +495,8 @@
       <workItem from="1746694915500" duration="3046000" />
       <workItem from="1746705290366" duration="14410000" />
       <workItem from="1747678720933" duration="12662000" />
-      <workItem from="1747863414418" duration="1437000" />
+      <workItem from="1747863414418" duration="1755000" />
+      <workItem from="1748283184293" duration="4226000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <option name="closed" value="true" />
@@ -541,7 +514,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746724115879</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="test corect v2">
+      <option name="closed" value="true" />
+      <created>1747865132936</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1747865132936</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -553,6 +534,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="test commit" />
     <MESSAGE value="v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1" />
+    <MESSAGE value="test corect v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="test corect v2" />
   </component>
 </project>
